@@ -43,6 +43,7 @@ declare module 'vue' {
     IconCar: typeof import('~icons/icon/car')['default']
     IconCart: typeof import('~icons/icon/cart')['default']
     IconCheckFilled: typeof import('~icons/icon/check-filled')['default']
+    IconDoubleArrow: typeof import('~icons/icon/double-arrow')['default']
     ItemObserver: typeof import('./../src/views/example-view/components/ItemObserver.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

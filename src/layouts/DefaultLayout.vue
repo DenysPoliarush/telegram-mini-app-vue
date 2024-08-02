@@ -21,7 +21,7 @@
     <div class="flex flex-grow overflow-hidden">
       <Sidebar />
 
-      <div class="flex-1 overflow-auto p-4">
+      <div class="flex-1 overflow-auto p-4 pt-10 md:pt-4">
         <router-view />
       </div>
     </div>
