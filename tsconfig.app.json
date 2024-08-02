@@ -1,0 +1,28 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "dts/*",
+    "src/**/*",
+    "src/**/*.vue",
+    "tests",
+    "tailwind/tailwind.colors.ts"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@colors": [
+        "./tailwind/tailwind.colors.ts"
+      ]
+    },
+    "types": [
+      "unplugin-icons/types/vue"
+    ]
+  }
+}
