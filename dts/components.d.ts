@@ -48,6 +48,15 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./../src/components/layout/Sidebar.vue')['default']
+    TelegramAlert: typeof import('./../src/views/telegram/components/TelegramAlert.vue')['default']
+    TelegramBackButton: typeof import('./../src/views/telegram/components/TelegramBackButton.vue')['default']
+    TelegramBiometricManager: typeof import('./../src/views/telegram/components/TelegramBiometricManager.vue')['default']
+    TelegramClosingConfirmation: typeof import('./../src/views/telegram/components/TelegramClosingConfirmation.vue')['default']
+    TelegramConfirm: typeof import('./../src/views/telegram/components/TelegramConfirm.vue')['default']
+    TelegramExpandedViewport: typeof import('./../src/views/telegram/components/TelegramExpandedViewport.vue')['default']
+    TelegramMainButton: typeof import('./../src/views/telegram/components/TelegramMainButton.vue')['default']
+    TelegramPopup: typeof import('./../src/views/telegram/components/TelegramPopup.vue')['default']
+    TelegramUseWebApp: typeof import('./../src/views/telegram/components/TelegramUseWebApp.vue')['default']
     TestComponent: typeof import('./../src/views/example-view/components/TestComponent.vue')['default']
   }
   export interface ComponentCustomProperties {
