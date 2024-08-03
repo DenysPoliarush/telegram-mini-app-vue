@@ -2,18 +2,31 @@ import type { RouteRecordRaw } from 'vue-router'
 
 import { routeNames } from './route-names'
 
-import { telegramRoutes } from '@/views/telegram/telegram-page.routes'
-
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
 const defaultLayoutRoutes: RouteRecordRaw = {
   path: '/',
   name: routeNames.rootPage,
-  redirect: { name: routeNames.TelegramComponents },
+  redirect: { name: routeNames.home },
   component: DefaultLayout,
   children: [
     // list of views that use default layout
-    ...telegramRoutes
+    {
+      path: 'telegram',
+      name: routeNames.home,
+      component: () => import('@/pages/Home.vue'),
+      meta: {
+        label: 'Home'
+      }
+    },
+    {
+      path: 'web-app',
+      name: routeNames.webAppData,
+      component: () => import('@/pages/UseWebApp.vue'),
+      meta: {
+        label: 'web app data'
+      }
+    }
   ]
 }
 

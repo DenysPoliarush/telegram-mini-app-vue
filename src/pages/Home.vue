@@ -23,7 +23,6 @@
     <TelegramExpandedViewport />
     <TelegramMainButton />
     <TelegramPopup v-if="isPopupShown" @close="isConfirmShown = false" />
-    <TelegramUseWebApp />
   </div>
 </template>
 
