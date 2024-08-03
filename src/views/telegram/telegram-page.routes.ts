@@ -11,7 +11,7 @@ export const telegramRoutes: Array<RouteRecordRaw> = [
     name: telegramRouteNames.TelegramComponents,
     component: () => import('./TelegramComponents.vue'),
     meta: {
-      label: 'Telegram Components'
+      label: 'Home'
     }
   },
   {
@@ -19,7 +19,7 @@ export const telegramRoutes: Array<RouteRecordRaw> = [
     name: telegramRouteNames.TelegramUseWebApp,
     component: () => import('./TelegramUseWebApp.vue'),
     meta: {
-      label: 'Telegram Use web app'
+      label: 'web app data'
     }
   }
 ]

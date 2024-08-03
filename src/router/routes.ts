@@ -2,8 +2,6 @@ import type { RouteRecordRaw } from 'vue-router'
 
 import { routeNames } from './route-names'
 
-import { authRoutes } from '@/views/auth/auth.routes'
-import { exampleViewRoutes } from '@/views/example-view/example-view.routes'
 import { telegramRoutes } from '@/views/telegram/telegram-page.routes'
 
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
@@ -11,11 +9,10 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
 const defaultLayoutRoutes: RouteRecordRaw = {
   path: '/',
   name: routeNames.rootPage,
-  redirect: { name: routeNames.exampleGeneral },
+  redirect: { name: routeNames.TelegramComponents },
   component: DefaultLayout,
   children: [
     // list of views that use default layout
-    ...exampleViewRoutes,
     ...telegramRoutes
   ]
 }
@@ -26,14 +23,7 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/'
   },
 
-  authRoutes,
-  defaultLayoutRoutes,
-  {
-    path: '/react-vs-vue',
-    component: DefaultLayout,
-    children: [{ path: '', name: 'react-vs-vue', component: () => import('@/views/react-vs-vue/Index.vue') }]
-
-  }
+  defaultLayoutRoutes
 ]
 
 export {

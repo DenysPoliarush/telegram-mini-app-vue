@@ -40,6 +40,7 @@ declare module 'vue' {
     ExampleViewComponent: typeof import('./../src/views/example-view/components/ExampleViewComponent.vue')['default']
     FF: typeof import('./../src/components/FF.vue')['default']
     GeneralExampleComponent: typeof import('./../src/views/example-view/general/components/GeneralExampleComponent.vue')['default']
+    Header: typeof import('./../src/components/layout/Header.vue')['default']
     IconCar: typeof import('~icons/icon/car')['default']
     IconCart: typeof import('~icons/icon/cart')['default']
     IconCheckFilled: typeof import('~icons/icon/check-filled')['default']
