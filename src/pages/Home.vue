@@ -1,51 +1,35 @@
 <template>
-  <div>
-    <div>
-      <el-button
-        v-for="btn in buttons"
-        :key="btn.title"
-        type="primary"
-        plain
-        class="mb-2"
-        @click="btn.cb"
-      >
-        {{ btn.title }}
-      </el-button>
-    </div>
-
-    Confirmed: {{ isConfirmed }}
-
-    <TelegramAlert v-if="isAlertShown" @close="isAlertShown = false" />
-    <TelegramBackButton /> <!-- BackButton is not supported in version 6.0 -->
-    <TelegramBiometricManager /> <!-- BiometricManager is not supported in version 6.0 -->
-    <TelegramClosingConfirmation /> <!-- ClosingConfirmation is not supported in version 6.0 -->
-    <TelegramConfirm v-if="isConfirmShown" @ok="isConfirmed = $event" @close="isConfirmShown = false" />
-    <TelegramExpandedViewport />
-    <TelegramMainButton />
-    <TelegramPopup v-if="isPopupShown" @close="isConfirmShown = false" />
+  <div class="relative flex flex-wrap justify-between gap-2">
+    <el-button
+      v-for="nav in navigation"
+      :key="nav.name"
+      type="primary"
+      plain
+      class="grow"
+      @click="$router.push({ name: nav.name })"
+    >
+      {{ nav.label }}
+    </el-button>
   </div>
 </template>
 
 <script lang="ts" setup>
-const isAlertShown = ref(false)
-const isConfirmShown = ref(false)
-const isPopupShown = ref(false)
+import { defaultLayoutRoutes } from '@/router/routes'
+import type { RouteRecordRaw } from 'vue-router'
 
-const isConfirmed = ref<boolean | string>('not opened')
+interface INavItem {
+  name: string
+  label: string
+}
 
-const buttons = ref<{title: string; cb: () => void}[]>([
-  {
-    title: 'Show alert',
-    cb: () => { isAlertShown.value = true }
-  },
-  {
-    title: 'Show confirm',
-    cb: () => { isConfirmShown.value = true }
-  },
-  {
-    title: 'Show popup',
-    cb: () => { isPopupShown.value = true }
+const navigation = defaultLayoutRoutes.children?.reduce((acc: INavItem[], curr: RouteRecordRaw) => {
+  if (curr.name !== 'home') {
+    acc.push({
+      name: curr.name as string,
+      label: curr.meta?.label || ''
+    })
   }
-])
 
+  return acc
+}, [])
 </script>

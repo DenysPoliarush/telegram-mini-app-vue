@@ -319,6 +319,7 @@
     "watchTriggerable": true,
     "watchWithFilter": true,
     "whenever": true,
-    "ElBadge": true
+    "ElBadge": true,
+    "useUtils": true
   }
 }

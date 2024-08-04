@@ -30,3 +30,7 @@
 @use "element-plus/theme-chalk/src/tabs";
 @use "element-plus/theme-chalk/src/dialog";
 @use "element-plus/theme-chalk/src/overlay";
+
+.el-button + .el-button {
+  margin: 0;
+}

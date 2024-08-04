@@ -1,8 +1,19 @@
 export const routeNames = {
   rootPage: 'rootPage',
 
-  home: 'Home',
-  webAppData: 'WebAppData',
+  home: 'home',
+  webAppData: 'webAppData',
+  buttons: 'buttons',
+  expandedViewport: 'expandedViewport',
+  theme: 'theme',
+  biometricManager: 'biometricManager',
+  closingConfirmation: 'closingConfirmation',
+  cloudStorage: 'cloudStorage',
+  popup: 'popup',
+  haptic: 'haptic',
+  navigation: 'navigation',
+  shareStory: 'shareStory',
+  qrScanner: 'qrScanner',
 
   additionalDefaultLayoutRoute: 'additionalDefaultLayoutRoute',
   additionalNoLayoutRoute: 'additionalNoLayoutRoute'
