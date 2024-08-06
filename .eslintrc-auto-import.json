@@ -320,6 +320,14 @@
     "watchWithFilter": true,
     "whenever": true,
     "ElBadge": true,
-    "useUtils": true
+    "useUtils": true,
+    "useIsConnectionRestored": true,
+    "useTonAddress": true,
+    "useTonConnectModal": true,
+    "useTonConnectUI": true,
+    "useTonWallet": true,
+    "TonConnectUIContext": true,
+    "TonConnectUIOptionsContext": true,
+    "createTonConnectUIProvider": true
   }
 }

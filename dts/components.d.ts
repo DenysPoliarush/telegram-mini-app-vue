@@ -59,6 +59,7 @@ declare module 'vue' {
     TelegramPopup: typeof import('./../src/components/TelegramPopup.vue')['default']
     TelegramUseWebApp: typeof import('../src/pages/telegram/components/TelegramUseWebApp.vue')['default']
     TestComponent: typeof import('../src/pages/example-view/components/TestComponent.vue')['default']
+    TonConnectButton: typeof import('./../src/components/TonConnectButton.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']

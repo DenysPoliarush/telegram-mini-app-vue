@@ -114,6 +114,14 @@ const defaultLayoutRoutes: RouteRecordRaw = {
       meta: {
         label: 'QR Scanner'
       }
+    },
+    {
+      path: 'ton-connect',
+      name: routeNames.tonConnect,
+      component: () => import('@/pages/TonConnect.vue'),
+      meta: {
+        label: 'Ton connect'
+      }
     }
   ]
 }

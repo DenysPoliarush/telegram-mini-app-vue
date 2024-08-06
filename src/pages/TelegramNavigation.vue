@@ -37,11 +37,15 @@ const buttons = ref<{title: string; cb: () => void}[]>([
     cb: () => '' // openInvoice()
   },
   {
-    title: 'openLink',
+    title: 'openWebLink - X.com',
     cb: () => openLink('https://x.com/home')
   },
   {
-    title: 'openTelegramLink',
+    title: 'openMiniApp',
+    cb: () => openTelegramLink('https://t.me/my_first_mini_app_on_vue_bot/test_mini_app')
+  },
+  {
+    title: 'openTelegramChanel',
     cb: () => openTelegramLink('https://t.me/+BnXU8HvHf2IxNDM6')
   },
   {

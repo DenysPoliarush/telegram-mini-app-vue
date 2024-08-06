@@ -7,6 +7,7 @@ import { store } from '@/store/create-store'
 import {
   PortalPlugin,
   I18nPlugin,
+  TonConnect,
   VueGlobalPropertiesPlugin
 } from '@/plugins'
 
@@ -17,6 +18,7 @@ const app = createApp(App)
 app
   .use(store)
   .use(router)
+  .use(TonConnect)
   .use(PortalPlugin)
   .use(I18nPlugin)
   .use(VueGlobalPropertiesPlugin)

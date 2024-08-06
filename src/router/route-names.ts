@@ -14,6 +14,7 @@ export const routeNames = {
   navigation: 'navigation',
   shareStory: 'shareStory',
   qrScanner: 'qrScanner',
+  tonConnect: 'tonConnect',
 
   additionalDefaultLayoutRoute: 'additionalDefaultLayoutRoute',
   additionalNoLayoutRoute: 'additionalNoLayoutRoute'
