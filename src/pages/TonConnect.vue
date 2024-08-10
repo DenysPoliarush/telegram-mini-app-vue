@@ -1,5 +1,7 @@
 <template>
-  <TonConnectButton />
+  <div class="flex justify-end">
+    <TonConnectButton />
+  </div>
 
   <pre class="mt-2">
 address: {{ address }}
@@ -19,15 +21,4 @@ const { address } = useTonAddress(true)
 const { wallet } = useTonWallet()
 const { close, open, state } = useTonConnectModal()
 const { restored } = useIsConnectionRestored()
-
-async function connectToWallet () {
-  const connectedWallet = await open()
-  // Do something with connectedWallet if needed
-  console.log(connectedWallet)
-}
-
-// Call the function
-connectToWallet().catch(error => {
-  console.error('Error connecting to wallet:', error)
-})
 </script>
